@@ -1,0 +1,399 @@
+/* =====================================
+   BEYOND THE EMERALD CITY
+   CSS STYLESHEET
+===================================== */
+
+/* WEBSITE COLOR PALETTE */
+
+:root {
+    --text: #173D36;
+    --background: #FFFFFF;
+    --primary: #16816C;
+    --secondary: #D8F2E9;
+    --accent: #51C9C2;
+}
+
+/* GENERAL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    line-height: 1.5;
+}
+
+#wrapper {
+    width: 94%;
+    max-width: 1400px;
+    margin: 20px auto;
+    background-color: var(--background);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+header {
+    background-color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 25px;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    display: block;
+}
+
+.site-title h1 {
+    color: var(--text);
+    font-size: 2em;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.site-title p {
+    font-size: 1em;
+    margin: 5px 0 0;
+}
+
+.search input {
+    width: 180px;
+    padding: 10px;
+    background-color: var(--background);
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+nav {
+    background-color: var(--primary);
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: var(--background);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 14px 15px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--accent);
+    color: var(--text);
+}
+
+nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+/* =====================================
+   MAIN CONTENT
+===================================== */
+
+main {
+    padding: 20px;
+}
+
+/* HERO IMAGE */
+
+#hero img {
+    width: 100%;
+    height: 280px;
+    display: block;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+/* INTRODUCTION */
+
+.intro {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.intro h2 {
+    font-size: 2em;
+    margin: 0 0 8px;
+}
+
+.intro p {
+    font-size: 1em;
+    font-style: italic;
+    margin: 0;
+}
+
+/* =====================================
+   CONTENT LAYOUT
+===================================== */
+
+.top-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.bottom-row {
+    display: grid;
+    grid-template-columns: 2fr 1.25fr 1fr;
+    gap: 15px;
+}
+
+.panel {
+    background-color: var(--secondary);
+    padding: 15px;
+    border-radius: 6px;
+    min-width: 0;
+}
+
+.panel h2 {
+    color: var(--text);
+    font-size: 1.25em;
+    margin: 0 0 12px;
+}
+
+/* =====================================
+   MUST-SEE HIGHLIGHTS
+===================================== */
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 5px;
+    order: 1;
+}
+
+figcaption {
+    font-weight: bold;
+    margin-top: 8px;
+    order: 2;
+}
+
+figure p {
+    font-size: 0.85em;
+    margin: 5px 0;
+    order: 3;
+}
+
+/* =====================================
+   POPULAR DESTINATIONS
+===================================== */
+
+.destinations ul {
+    columns: 2;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.destinations li {
+    margin-bottom: 12px;
+}
+
+/* =====================================
+   RECOMMENDATIONS BY INTEREST
+===================================== */
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.interest-item {
+    background-color: var(--background);
+    padding: 12px 8px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.interest-icon {
+    display: block;
+    color: var(--primary);
+    font-size: 2.5em;
+    margin-bottom: 8px;
+}
+
+.interest-item h3 {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+/* =====================================
+   TRAVEL VIDEO
+===================================== */
+
+.travel-video video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: var(--text);
+    border-radius: 5px;
+}
+
+/* =====================================
+   TRAVEL TIPS
+===================================== */
+
+.travel-tips ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.travel-tips li {
+    margin-bottom: 10px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 15px;
+    background-color: var(--text);
+    color: var(--background);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em;
+}
+
+footer a {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+
+/* =====================================
+   TABLET RESPONSIVE STYLES
+===================================== */
+
+@media screen and (max-width: 900px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .top-row,
+    .bottom-row {
+        grid-template-columns: 1fr;
+    }
+
+    #hero img {
+        height: 230px;
+    }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE STYLES
+===================================== */
+
+@media screen and (max-width: 600px) {
+
+    #wrapper {
+        width: 100%;
+        margin: 0;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .branding {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 170px;
+    }
+
+    .site-title h1 {
+        font-size: 1.6em;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav a {
+        padding: 12px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    #hero img {
+        height: 180px;
+    }
+
+    .intro h2 {
+        font-size: 1.5em;
+    }
+
+    .highlight-grid,
+    .interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    figure img {
+        height: 200px;
+    }
+
+    .destinations ul {
+        columns: 1;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+}
